@@ -1,0 +1,15 @@
+rule,severity,description,rows_affected,total_rows,pct_of_rows
+orderid_missing,critical,OrderID chýba,0,200,0.0
+orderid_bad_format,critical,OrderID nezodpovedá formátu ORDdddd,0,200,0.0
+orderid_duplicate,critical,OrderID sa v dátach opakuje,22,200,11.0
+region_invalid,critical,Region nie je North/South/East/West ani po zjednotení,0,200,0.0
+product_invalid,critical,"Product nepatrí do povolenej množiny (Laptop, Phone, Tablet, Accessory)",31,200,15.5
+quantity_invalid,critical,Quantity nie je kladné celé číslo,29,200,14.5
+salesamount_invalid,critical,SalesAmount nie je kladné číslo,22,200,11.0
+discount_invalid,critical,"Discount je vyplnený, ale nie je číslo v intervale 0-100",17,200,8.5
+orderdate_invalid,critical,OrderDate chýba alebo nie je platný dátum,3,200,1.5
+deliverydate_invalid,critical,DeliveryDate chýba alebo nie je platný dátum,10,200,5.0
+delivery_before_order,critical,DeliveryDate je skôr než OrderDate,18,200,9.0
+discount_missing,warning,Discount chýba (upozornenie),12,200,6.0
+customername_missing,warning,CustomerName chýba (upozornenie),22,200,11.0
+phone_invalid,warning,"PhoneNumber je vyplnený, ale nemá 10-15 číslic (upozornenie)",34,200,17.0
